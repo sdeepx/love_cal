@@ -1,88 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Love Calculator</title>
-        <style type="text/css">
-      
-        
-        .int{
-            text-align: center;
-            background-color: red;
-			width: 500px;
-			height: 550px;
-			position: relative;
-            margin: auto;
-            top: 50px;
-           
-            border-radius: 20px;
-
-			animation-name: myanimation;
-            animation-fill-mode: forwards;
-            animation-duration: 1s;
-            
-           
-        }
-        #int1{
-            margin-top: 200px;
-            background: transparent;
-            border: none;
-            border-bottom: 3px solid black;
-        }
-        #int2{
-            background: transparent;
-            border: none;
-            border-bottom: 3px solid black;
-        }
-
-        @keyframes myanimation {
-            0% {top: -500px;}
-            50% {top: 100;border-radius: 10%;}
-			100% {top: 100;border-radius: 20%;}
-        }
-        
-        </style>
-
-
-        <script type="text/javascript">
-
-        function love(){
-            var num1,num2;
-            num1 = document.getElementById("int1").value;
-            num2 = document.getElementById("int2").value;
-            var len1 = num1.length;
-            var len2 = num2.length;
-        
-            var lp = Math.floor(Math.random()*90)+20;
-            var lp1 = Math.floor(Math.random()*100)+10;
-            var lp2 = Math.floor(Math.random()*60)+30;
-            var lp3 = Math.floor(Math.random()*10)+5;
-
-           var per = (len1 * lp3);
-           var per1 = (len2 * lp3);
-           
-
-           if (per > per1); {
-               alert(" You love " + num2  + " "+  lp + " %");
-           }
-            if (per1 > per); {
-               alert(num2 + " loves you "+ lp1 + "%");
-           }
-            
-
-        }
-        
-        
-        </script>
+         <title>Love Calculator</title>
+        <link rel="stylesheet" type="text/css" href="love_cal.css">
+        <script type="text/javascript" src="love_cal.js">
+        </script>        
     </head>
 
     <body>
+        <header id="head1">
+            <div class="dl">
+            <h2><a href=" " id="link">Welcome to DeepLove</a></h2>
+        </div>
+            </header>
+            <form action="" method="get">
         <div class="int">
+
             <label><b><i> Your Name  : </i> </b></label>
             <input id="int1" name="text" placeholder="Enter Your Name" required><br><br>
+
             <label><b><i> Your Lover's Name  : </i> </b></label>
             <input id="int2" name="text"  placeholder="Enter Lover's Name" required><br><br>
+
             <button onclick="love()">Check</button>
         </div>
+        </form>
 
     </body>
 </html>
